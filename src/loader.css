@@ -1,0 +1,103 @@
+.b {
+  border: 3px solid #0d6efd;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  margin: 10px;
+  position: relative;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.b1 {
+  animation-name: b1;
+}
+.b2 {
+  margin-left: 72.5px;
+  animation-name: b2;
+}
+.b3 {
+  margin-top: -60px;
+  animation-name: b3;
+}
+.b4 {
+  margin-left: 72.5px;
+  animation-name: b4;
+}
+
+@keyframes b1 {
+  0% {
+    left: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 62.5px;
+    bottom: 0px;
+    transform: rotate(90deg);
+  }
+  100% {
+    left: 62.5px;
+    bottom: -61.25px;
+    transform: rotate(90deg);
+  }
+}
+@keyframes b2 {
+  50% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -61.25px;
+  }
+}
+@keyframes b3 {
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: -61.25px;
+  }
+}
+@keyframes b4 {
+  0% {
+    left: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: -62.5px;
+    top: 0px;
+    transform: rotate(90deg);
+  }
+  100% {
+    left: -62.5px;
+    top: -61.25px;
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .building {
+    width: 100%;
+  }
+  .caption {
+    display: none;
+  }
+}
+
+.spinning {
+  margin-right: 7px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.LoaderButton:disabled {
+  background-color: rgb(1, 21, 41);
+  color: #ddd;
+}

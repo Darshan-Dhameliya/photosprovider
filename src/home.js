@@ -21,7 +21,7 @@ export default function Home() {
   const [{ islogin, images }, dispatch] = useStateValue();
   const [isLoading, setisLoading] = useState(false);
   const [url] = useState(
-    "https://pixabay.com/api/?key=20836465-18774b5c4c5edd16df2ee5902"
+    "https://pixabay.com/api/?key=20836465-18774b5c4c5edd16df2ee5902",
   );
 
   const [show, setShow] = useState(false);
@@ -69,7 +69,7 @@ export default function Home() {
   const getPhotos = () => {
     setisLoading(true);
     axios
-      .get(`${url}&per_page=${searchphotos}`)
+      .get(`${url}&per_page=${searchphotos}&safesearch=true`)
       .then((response) => {
         setPhotoUrl(response.data.hits);
         dispatch({
